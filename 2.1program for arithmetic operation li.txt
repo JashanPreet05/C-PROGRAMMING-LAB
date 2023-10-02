@@ -1,0 +1,14 @@
+//program for arithmetic operation like add,sub,multip and remainder
+#include<stdio.h>
+int main() {
+    float a,b;
+    printf("Enter the value of a");
+    scanf("%f",&a);
+    printf("Enter the value of b");
+    scanf("%f",&b);
+    printf("the sum of a and b is %f \n",a+b);
+    printf("the sub of a and b is %f \n",a-b);
+    printf("the multiplication of a and b is %f \n", a*b);
+    printf("the division of a and b is %f \n",a/b);
+    return 0;
+}
