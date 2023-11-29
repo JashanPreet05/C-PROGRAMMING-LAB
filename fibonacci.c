@@ -1,21 +1,28 @@
 #include <stdio.h>
 
-int main() {
-    int n, first = 0, second = 1, next, i=0;
+int fib(int n){
+    if(n == 0 || n == 1)
+        return n;
 
-    printf("Enter the number of terms: ");
-    scanf("%d", &n);
+    else 
+        return fib(n-1) + fib(n-2);
+}
 
-    printf("Fibonacci sequence up to %d terms:\n", n);
-    while( i < n) {
-        printf("%d ", first);
-        next = first + second;
-        first = second;
-        second = next;
-        i++;
+void printfib(int n){
+    if (n == 0 || n == 1 ){
+        printf("%d ", n);
     }
+    else {
+        printfib(n-1);
+        printf("%d ", fib(n));
+    }
+}
 
+int main(){
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("\n%d", &n);
+    printfib(n);
     printf("\n");
-
     return 0;
 }
